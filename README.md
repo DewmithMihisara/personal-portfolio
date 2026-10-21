@@ -1,26 +1,40 @@
-# Hi, I'm Dewmith Mihisara
+# Dewmith Mihisara
 
-**Software Engineer | Full-Stack Developer**
+Software Engineer · Colombo, Sri Lanka
 
-I build scalable web applications, RESTful APIs, and reliable backend systems. I enjoy solving engineering problems and continuously learning new technologies.
+This is the source for my personal portfolio at [dewmithmihisara.online](https://www.dewmithmihisara.online).
 
-### Tech Stack
+## About Me
 
-**Languages:** Java, JavaScript, TypeScript, SQL
+I'm an enthusiastic and detail-oriented software engineer specializing in Java, Spring Boot, and scalable cloud solutions. I bridge robust backend engineering with collaborative product delivery — designing performant APIs, optimizing service reliability, and deploying solutions that scale confidently in the cloud.
 
-**Backend:** Spring Boot, Node.js, NestJS, REST APIs, Hibernate
+I'm passionate about writing clean, efficient code and thrive in agile, collaborative environments where technical delivery is closely aligned with business outcomes.
 
-**Frontend:** React, Next.js, Angular, Tailwind CSS
+## What I Do
 
-**Databases:** PostgreSQL, MySQL, MongoDB
+- **Backend Engineering** — Designing resilient services with Java, Spring Boot, and event-driven patterns that scale gracefully.
+- **Solution Architecture** — Translating complex domain logic into modular, cloud-ready architectures that remain easy to evolve.
+- **Cloud & Automation** — Automating CI/CD workflows and infrastructure to deliver features faster without sacrificing reliability.
+- **Team Collaboration** — Mentoring teams, facilitating agile rituals, and aligning technical delivery with business outcomes.
 
-**Tools & Platforms:** Git, Docker, AWS, GCP, Maven
+## Featured Work
 
-### GitHub Stats
+- **Marketplace** — A multi-vendor marketplace platform enabling seamless product discovery, secure payments, and automated vendor onboarding.
+- **ProveIt** — A digital evidence management system with secure file ingestion, validation workflows, and real-time audit trails.
+- **Swarnavahini Election 2025** — A high-traffic election coverage experience with live results, analytics dashboards, and resilient cloud infrastructure.
+- **PetMedi.lk** — A telehealth platform connecting pet owners with vets, featuring appointment scheduling, video consults, and prescriptions.
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=DewmithMihisara&show_icons=true&theme=transparent&hide_border=true&rank_icon=github)
+## Education
 
-### Connect
+- **Wrexham University** — BSc, Computer Software Engineering (2025 – 2026)
+- **IJSE (Institute of Software Engineering)** — Higher National Diploma, Computer Software Engineering (2022 – 2025)
+- **St. Aloysius' College** — GCE Ordinary Level
 
-[LinkedIn](https://www.linkedin.com/in/dewmith-mihisara/) ·
-[Portfolio](dewmith-mihisara-personal-portfolio-v2-6h91tv0c9.vercel.app/) ·
+## Let's Connect
+
+- Email: [mihisaralokuhewage@gmail.com](mailto:mihisaralokuhewage@gmail.com)
+- LinkedIn: [linkedin.com/in/dewmithmihisara](https://www.linkedin.com/in/dewmithmihisara/)
+- GitHub: [github.com/dewmithmihisara](https://github.com/dewmithmihisara)
+- Website: [dewmithmihisara.online](https://www.dewmithmihisara.online)
+
+Whether it's architecting resilient backend systems, launching full-stack products, or scaling cloud services — I'm always excited to collaborate on the next challenge.
