@@ -33,7 +33,7 @@ I'm passionate about writing clean, efficient code and thrive in agile, collabor
 ## Let's Connect
 
 - Email: [mihisaralokuhewage@gmail.com](mailto:mihisaralokuhewage@gmail.com)
-- LinkedIn: [linkedin.com/in/dewmithmihisara](https://www.linkedin.com/in/dewmithmihisara/)
+- LinkedIn: [linkedin.com/in/dewmithmihisara](https://www.linkedin.com/in/dewmith-mihisara/)
 - GitHub: [github.com/dewmithmihisara](https://github.com/dewmithmihisara)
 - Website: [dewmithmihisara.online](https://www.dewmithmihisara.online)
 

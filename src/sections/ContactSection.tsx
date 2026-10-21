@@ -81,7 +81,7 @@ export function ContactSection() {
               <span className="flex size-9 items-center justify-center rounded-lg border border-border">
                 <Linkedin className="size-4" />
               </span>
-              linkedin.com/in/dewmithmihisara
+              linkedin.com/in/dewmith-mihisara
             </a>
             <a
               className="flex items-center gap-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"

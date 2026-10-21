@@ -58,7 +58,7 @@ export function HomeSection({ onNavigate }: HomeSectionProps) {
 
             <div className="flex items-center gap-3">
               <a
-                href="https://www.linkedin.com/in/dewmithmihisara"
+                href="https://www.linkedin.com/in/dewmith-mihisara"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-outline gap-2"
