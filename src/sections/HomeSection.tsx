@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDownRight, Github, Linkedin } from 'lucide-react'
+import { ImageCompareSlider } from '../components/ImageCompareSlider'
 import type { SectionId } from '../constants/sections'
 
 type HomeSectionProps = {
@@ -85,10 +86,11 @@ export function HomeSection({ onNavigate }: HomeSectionProps) {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <div className="card h-64 w-64 overflow-hidden !p-1 md:h-80 md:w-80">
-            <img
-              src="/dewmith-mihisara-home.jpeg"
-              alt="Dewmith Mihisara"
-              className="h-full w-full rounded-md object-cover"
+            <ImageCompareSlider
+              beforeSrc="/base.png"
+              afterSrc="/scratch.jpg"
+              beforeAlt="Dewmith Mihisara"
+              afterAlt="Dewmith Mihisara, animated version"
             />
           </div>
         </motion.div>

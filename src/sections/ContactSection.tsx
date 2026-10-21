@@ -1,6 +1,6 @@
-import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Loader2, Mail, MapPin, Send } from 'lucide-react'
+import { useState, type FormEvent } from 'react'
 
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -179,7 +179,7 @@ export function ContactSection() {
       </div>
       <footer className="mt-10 border-t border-border">
         <div className="mx-auto w-full max-w-5xl px-0 py-6 text-xs text-muted-foreground sm:text-sm">
-          <span>© 2025 Dewmith Mihisara. All rights reserved.</span>
+          <span>© 2026 Dewmith Mihisara. All rights reserved.</span>
         </div>
       </footer>
     </section>
