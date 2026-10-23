@@ -2,7 +2,7 @@
 
 Software Engineer · Colombo, Sri Lanka
 
-This is the source for my personal portfolio at [dewmithmihisara.online](https://www.dewmithmihisara.online).
+This is the source for my personal portfolio at [dewmithmihisara.vercel.app](https://dewmithmihisara.vercel.app/).
 
 ## About Me
 
@@ -35,6 +35,6 @@ I'm passionate about writing clean, efficient code and thrive in agile, collabor
 - Email: [mihisaralokuhewage@gmail.com](mailto:mihisaralokuhewage@gmail.com)
 - LinkedIn: [linkedin.com/in/dewmithmihisara](https://www.linkedin.com/in/dewmith-mihisara/)
 - GitHub: [github.com/dewmithmihisara](https://github.com/dewmithmihisara)
-- Website: [dewmithmihisara.online](https://www.dewmithmihisara.online)
+- Website: [dewmithmihisara.vercel.app](https://dewmithmihisara.vercel.app/)
 
 Whether it's architecting resilient backend systems, launching full-stack products, or scaling cloud services — I'm always excited to collaborate on the next challenge.
