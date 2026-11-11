@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeft, ArrowRight, Quote } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ChevronDown, Quote } from 'lucide-react'
+
+/** Quotes longer than this are clamped with a "See more" toggle. */
+const LONG_QUOTE_CHARS = 360
 
 const recommendations = [
   {
@@ -69,19 +72,25 @@ export function TrustedVoicesSection() {
 
   const activeRecommendation = useMemo(() => recommendations[activeIndex], [activeIndex])
 
+  const [expanded, setExpanded] = useState(false)
+  const isLong = activeRecommendation.quote.length > LONG_QUOTE_CHARS
+
   const cycleTo = (nextIndex: number) => {
     setDirection(nextIndex > activeIndex ? 1 : -1)
     const safeIndex = (nextIndex + total) % total
+    setExpanded(false)
     setActiveIndex(safeIndex)
   }
 
   useEffect(() => {
+    // Don't auto-advance while someone is reading an expanded testimonial.
+    if (expanded) return
     const interval = window.setInterval(() => {
       cycleTo(activeIndex + 1)
     }, 9000)
     return () => window.clearInterval(interval)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeIndex, total])
+  }, [activeIndex, total, expanded])
 
   const handleDotNavigate = (index: number) => {
     if (index === activeIndex) return
@@ -127,9 +136,30 @@ export function TrustedVoicesSection() {
                 animate="center"
                 exit="exit"
               >
-                <p className="whitespace-pre-line text-sm leading-relaxed text-foreground sm:text-base">
+                <div
+                  id="testimonial-quote"
+                  tabIndex={expanded ? 0 : undefined}
+                  className={[
+                    'whitespace-pre-line text-sm leading-relaxed text-foreground sm:text-base',
+                    isLong && !expanded ? 'line-clamp-6' : '',
+                    isLong && expanded ? 'thin-scroll max-h-64 overflow-y-auto pr-3' : '',
+                  ].join(' ')}
+                >
                   {activeRecommendation.quote}
-                </p>
+                </div>
+
+                {isLong && (
+                  <button
+                    type="button"
+                    onClick={() => setExpanded((prev) => !prev)}
+                    aria-expanded={expanded}
+                    aria-controls="testimonial-quote"
+                    className="mt-3 inline-flex items-center gap-1 font-mono text-xs uppercase tracking-[0.14em] text-indigo-accent transition-opacity hover:opacity-75"
+                  >
+                    {expanded ? 'See less' : 'See more'}
+                    <ChevronDown className={['size-3.5 transition-transform', expanded ? 'rotate-180' : ''].join(' ')} />
+                  </button>
+                )}
 
                 <div className="mt-5 border-t border-border pt-4">
                   <h3 className="text-base font-semibold text-foreground">
