@@ -1,3 +1,5 @@
+import { useSeo } from '../seo/useSeo'
+import { pageMeta } from '../seo/site'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { HomeSection } from '../sections/HomeSection'
@@ -22,6 +24,7 @@ function StripHeader({ eyebrow, title, to, cta }: { eyebrow: string; title: stri
 }
 
 export function HomePage() {
+  useSeo(pageMeta('home'))
   const featured = projects.slice(0, 3)
   const latest = posts.slice(0, 3)
 

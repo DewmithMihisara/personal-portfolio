@@ -1,8 +1,11 @@
+import { useSeo } from '../seo/useSeo'
+import { pageMeta } from '../seo/site'
 import { PageHeader } from '../components/PageHeader'
 import { PostRow } from '../components/PostRow'
 import { posts } from '../lib/blog'
 
 export function BlogPage() {
+  useSeo(pageMeta('blog'))
   return (
     <>
       <PageHeader

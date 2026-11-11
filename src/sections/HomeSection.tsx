@@ -41,9 +41,9 @@ export function HomeSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            I’m an enthusiastic and detail-oriented software engineer specializing in Java,
-            Spring Boot, and scalable cloud solutions. Passionate about crafting clean,
-            efficient code and collaborating in agile environments.
+            I’m an enthusiastic and detail-oriented software engineer who builds reliable
+            backends, full-stack products and scalable cloud solutions. Passionate about
+            crafting clean, efficient code and collaborating in agile environments.
           </motion.p>
 
           <motion.div

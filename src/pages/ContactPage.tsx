@@ -1,7 +1,10 @@
+import { useSeo } from '../seo/useSeo'
+import { pageMeta } from '../seo/site'
 import { PageHeader } from '../components/PageHeader'
 import { ContactSection } from '../sections/ContactSection'
 
 export function ContactPage() {
+  useSeo(pageMeta('contact'))
   return (
     <>
       <PageHeader

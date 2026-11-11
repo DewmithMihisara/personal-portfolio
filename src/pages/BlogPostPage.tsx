@@ -3,13 +3,20 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { ArrowLeft } from 'lucide-react'
 import { Illustration } from '../components/Illustration'
-import { formatDate, getPost } from '../lib/blog'
+import { formatDate, getPost, type BlogPost } from '../lib/blog'
+import { useSeo } from '../seo/useSeo'
+import { postMeta } from '../seo/site'
 import { NotFoundPage } from './NotFoundPage'
 
 export function BlogPostPage() {
   const { slug = '' } = useParams()
   const post = getPost(slug)
   if (!post) return <NotFoundPage />
+  return <BlogPostView post={post} />
+}
+
+function BlogPostView({ post }: { post: BlogPost }) {
+  useSeo(postMeta(post))
 
   return (
     <article className="px-4 pt-28 sm:px-6 md:px-16">

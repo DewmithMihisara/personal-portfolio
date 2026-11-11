@@ -1,9 +1,12 @@
+import { useSeo } from '../seo/useSeo'
+import { pageMeta } from '../seo/site'
 import { PageHeader } from '../components/PageHeader'
 import { AboutSection } from '../sections/AboutSection'
 import { AcademicSection } from '../sections/AcademicSection'
 import { TrustedVoicesSection } from '../sections/TrustedVoicesSection'
 
 export function AboutPage() {
+  useSeo(pageMeta('about'))
   return (
     <>
       <PageHeader
