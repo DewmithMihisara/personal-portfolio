@@ -37,7 +37,7 @@ const stats = [
 
 export function AboutSection() {
   return (
-    <section className="flex h-full flex-col justify-center overflow-y-auto bg-background px-6 pb-24 pt-28 md:px-16">
+    <section id="about-me" className="scroll-mt-20 px-4 pt-16 sm:px-6 md:px-16">
       <div className="mx-auto w-full max-w-5xl">
         <div className="grid gap-10 md:grid-cols-12 md:gap-14">
           <motion.div
@@ -48,7 +48,7 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <p className="eyebrow">About Me</p>
-            <h2 className="mt-5 font-display text-3xl leading-tight text-foreground sm:text-4xl">
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
               Building reliable experiences, one sprint at a time
             </h2>
           </motion.div>

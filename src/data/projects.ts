@@ -5,7 +5,14 @@ export type Project = {
   description: string
   tech: string[]
   category: ProjectCategory
+  /** e.g. "Sep 2026 – Present" */
+  period?: string
+  /** Award or recognition shown as a badge */
+  award?: string
+  /** External link (repo / live site) */
   link?: string
+  /** Slug of a blog post about this project */
+  article?: string
 }
 
 export const PROJECT_CATEGORIES: Array<'All' | ProjectCategory> = [
@@ -45,4 +52,3 @@ export const projects: Project[] = [
     category: 'Full Stack',
   },
 ]
-

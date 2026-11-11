@@ -1,5 +1,8 @@
-when you need galary session, 
-    uncomment;
-        section.ts - line 7
-        portfolio.tsx - line 316,137
-        navebar.tsx - line 43
+when you need gallery page,
+    1. create src/pages/GalleryPage.tsx that renders <GallerySection /> (src/sections/GallerySection.tsx)
+    2. add a route in src/App.tsx:      <Route path="gallery" element={<GalleryPage />} />
+    3. add a nav item in src/constants/routes.ts:  { path: '/gallery', label: 'Gallery' }
+
+blog posts:
+    add a Markdown file to src/content/blog/ (copy the frontmatter from resumelog.md).
+    covers live in public/illustrations/ (cover: file-name.png).

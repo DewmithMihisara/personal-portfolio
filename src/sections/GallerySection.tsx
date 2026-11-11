@@ -8,7 +8,7 @@ export function GallerySection() {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null)
 
   return (
-    <section className="relative flex h-full flex-col justify-center bg-gradient-to-b from-secondary via-white to-secondary/70 px-6 py-16 md:px-16">
+    <section className="relative flex h-full flex-col justify-center bg-background px-6 py-16 md:px-16">
       <div className="absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-secondary/70 to-transparent blur-3xl" />
         <div className="absolute inset-y-0 left-1/3 w-1/3 rounded-full bg-muted-foreground/15 blur-3xl" />
@@ -42,7 +42,7 @@ export function GallerySection() {
             <motion.button
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-white shadow-lg shadow-black/5 transition-transform duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-3xl border border-border bg-background shadow-lg shadow-black/5 transition-transform duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -84,9 +84,9 @@ export function GallerySection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
               >
-                <Dialog.Content className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-2xl">
+                <Dialog.Content className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-background shadow-2xl">
                   <button
-                    className="absolute right-4 top-4 rounded-full bg-white/80 p-2 text-muted-foreground transition hover:bg-white"
+                    className="absolute right-4 top-4 rounded-full bg-background/80 p-2 text-muted-foreground transition hover:bg-background"
                     onClick={() => setSelectedItem(null)}
                     aria-label="Close gallery preview"
                   >

@@ -27,8 +27,8 @@ function SwipeUpIllustration() {
         animate={{ y: [-2, -8, -2] }}
         transition={{ repeat: Infinity, duration: 1.1, ease: 'easeInOut' }}
       >
-        <path d="M24 14 L24 4" stroke="#171717" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M20 8 L24 4 L28 8" stroke="#171717" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M24 14 L24 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M20 8 L24 4 L28 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
       </motion.g>
     </svg>
   )
@@ -51,8 +51,8 @@ function SwipeDownIllustration() {
         animate={{ y: [2, 8, 2] }}
         transition={{ repeat: Infinity, duration: 1.1, ease: 'easeInOut' }}
       >
-        <path d="M24 42 L24 52" stroke="#171717" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M20 48 L24 52 L28 48" stroke="#171717" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M24 42 L24 52" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M20 48 L24 52 L28 48" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
       </motion.g>
     </svg>
   )
@@ -85,7 +85,7 @@ function PinchIllustration() {
         cx="24"
         cy="29"
         r="4"
-        fill="#171717"
+        fill="currentColor"
         animate={{ scale: [1, 1.4, 1], opacity: [0.8, 1, 0.8] }}
         transition={{ repeat: Infinity, duration: 1.2, ease: 'easeInOut' }}
       />
@@ -99,13 +99,13 @@ const GESTURE_CARDS = [
   {
     id: 'swipe-up' as const,
     label: 'Swipe Up',
-    description: 'Previous section',
+    description: 'Scroll up',
     Illustration: SwipeUpIllustration,
   },
   {
     id: 'swipe-down' as const,
     label: 'Swipe Down',
-    description: 'Next section',
+    description: 'Scroll down',
     Illustration: SwipeDownIllustration,
   },
   {

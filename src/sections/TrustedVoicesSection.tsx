@@ -89,7 +89,7 @@ export function TrustedVoicesSection() {
   }
 
   return (
-    <section className="flex h-full flex-col justify-center overflow-y-auto bg-background px-6 pb-24 pt-28 md:px-16">
+    <section id="testimonials" className="scroll-mt-20 px-4 pt-24 sm:px-6 md:px-16">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export function TrustedVoicesSection() {
           transition={{ duration: 0.6 }}
         >
           <p className="eyebrow">Trusted Voices</p>
-          <h2 className="mt-5 font-display text-3xl leading-tight text-foreground sm:text-4xl">
+          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
             Testimonials that fuel my craft
           </h2>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
