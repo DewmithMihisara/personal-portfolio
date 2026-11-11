@@ -42,7 +42,7 @@ export function ContactSection() {
   }
 
   return (
-    <section className="flex h-full flex-col justify-center overflow-y-auto bg-background px-6 pb-8 pt-28 md:px-16">
+    <section className="px-4 pt-14 sm:px-6 md:px-16">
       <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-12 md:flex-row md:items-stretch">
         <motion.div
           className="card flex flex-1 flex-col justify-between gap-10"
@@ -53,7 +53,7 @@ export function ContactSection() {
         >
           <div>
             <p className="eyebrow">Get In Touch</p>
-            <h2 className="mt-5 font-display text-3xl leading-tight text-foreground sm:text-4xl">
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
               Let’s connect
             </h2>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">

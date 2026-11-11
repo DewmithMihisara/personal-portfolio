@@ -19,14 +19,8 @@ const education = [
 ]
 
 export function AcademicSection() {
-  const isScrollable = education.length > 3
-
-  const listClasses = ['space-y-4', isScrollable ? 'max-h-[460px] overflow-y-auto pr-1' : '']
-    .filter(Boolean)
-    .join(' ')
-
   return (
-    <section className="flex h-full flex-col justify-center overflow-y-auto bg-background px-6 pb-24 pt-28 md:px-16">
+    <section id="education" className="scroll-mt-20 px-4 pt-24 sm:px-6 md:px-16">
       <div className="mx-auto w-full max-w-5xl">
         <div className="grid gap-10 md:grid-cols-12 md:gap-14">
           <motion.div
@@ -37,7 +31,7 @@ export function AcademicSection() {
             transition={{ duration: 0.6 }}
           >
             <p className="eyebrow">Academic Journey</p>
-            <h2 className="mt-5 font-display text-3xl leading-tight text-foreground sm:text-4xl">
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
               Growth through continuous learning
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
@@ -46,7 +40,7 @@ export function AcademicSection() {
             </p>
           </motion.div>
 
-          <ol className={`md:col-span-6 md:col-start-7 ${listClasses}`}>
+          <ol className="space-y-4 md:col-span-6 md:col-start-7">
             {education.map((entry, index) => (
               <motion.li
                 key={entry.institution}

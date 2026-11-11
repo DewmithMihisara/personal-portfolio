@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeft, ArrowRight, Quote } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ChevronDown, Quote } from 'lucide-react'
+
+/** Quotes longer than this are clamped with a "See more" toggle. */
+const LONG_QUOTE_CHARS = 360
 
 const recommendations = [
   {
@@ -69,19 +72,25 @@ export function TrustedVoicesSection() {
 
   const activeRecommendation = useMemo(() => recommendations[activeIndex], [activeIndex])
 
+  const [expanded, setExpanded] = useState(false)
+  const isLong = activeRecommendation.quote.length > LONG_QUOTE_CHARS
+
   const cycleTo = (nextIndex: number) => {
     setDirection(nextIndex > activeIndex ? 1 : -1)
     const safeIndex = (nextIndex + total) % total
+    setExpanded(false)
     setActiveIndex(safeIndex)
   }
 
   useEffect(() => {
+    // Don't auto-advance while someone is reading an expanded testimonial.
+    if (expanded) return
     const interval = window.setInterval(() => {
       cycleTo(activeIndex + 1)
     }, 9000)
     return () => window.clearInterval(interval)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeIndex, total])
+  }, [activeIndex, total, expanded])
 
   const handleDotNavigate = (index: number) => {
     if (index === activeIndex) return
@@ -89,7 +98,7 @@ export function TrustedVoicesSection() {
   }
 
   return (
-    <section className="flex h-full flex-col justify-center overflow-y-auto bg-background px-6 pb-24 pt-28 md:px-16">
+    <section id="testimonials" className="scroll-mt-20 px-4 pt-24 sm:px-6 md:px-16">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +107,7 @@ export function TrustedVoicesSection() {
           transition={{ duration: 0.6 }}
         >
           <p className="eyebrow">Trusted Voices</p>
-          <h2 className="mt-5 font-display text-3xl leading-tight text-foreground sm:text-4xl">
+          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
             Testimonials that fuel my craft
           </h2>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
@@ -127,9 +136,30 @@ export function TrustedVoicesSection() {
                 animate="center"
                 exit="exit"
               >
-                <p className="whitespace-pre-line text-sm leading-relaxed text-foreground sm:text-base">
+                <div
+                  id="testimonial-quote"
+                  tabIndex={expanded ? 0 : undefined}
+                  className={[
+                    'whitespace-pre-line text-sm leading-relaxed text-foreground sm:text-base',
+                    isLong && !expanded ? 'line-clamp-6' : '',
+                    isLong && expanded ? 'thin-scroll max-h-64 overflow-y-auto pr-3' : '',
+                  ].join(' ')}
+                >
                   {activeRecommendation.quote}
-                </p>
+                </div>
+
+                {isLong && (
+                  <button
+                    type="button"
+                    onClick={() => setExpanded((prev) => !prev)}
+                    aria-expanded={expanded}
+                    aria-controls="testimonial-quote"
+                    className="mt-3 inline-flex items-center gap-1 font-mono text-xs uppercase tracking-[0.14em] text-indigo-accent transition-opacity hover:opacity-75"
+                  >
+                    {expanded ? 'See less' : 'See more'}
+                    <ChevronDown className={['size-3.5 transition-transform', expanded ? 'rotate-180' : ''].join(' ')} />
+                  </button>
+                )}
 
                 <div className="mt-5 border-t border-border pt-4">
                   <h3 className="text-base font-semibold text-foreground">
